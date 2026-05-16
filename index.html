@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>랜덤 데이트</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="랜덤데이트">
+  <link rel="apple-touch-icon" href="icons/icon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="top-nav">
+    <span class="nav-wordmark">랜덤 데이트</span>
+    <span class="nav-badge">BETA</span>
+  </nav>
+
+  <div class="hero-band">
+    <div class="hero-label">오늘의 플랜</div>
+    <div class="hero-title">뭐 할지 모르겠을 땐<br><span>뽑기</span>로 결정</div>
+    <div class="hero-sub">위치 · 식사 · 후식 · 놀거리를 랜덤으로</div>
+  </div>
+
+  <main class="main-content">
+    <div class="cards-grid" id="cards-grid"></div>
+
+    <button class="btn-primary" id="btn-all">모두 뽑기</button>
+  </main>
+
+  <!-- SLOT MACHINE MODAL -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-sheet">
+      <div class="modal-drag"></div>
+
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title"></div>
+        <button class="modal-close" id="modal-close" aria-label="닫기">✕</button>
+      </div>
+
+      <div class="slots-wrap" id="slots-wrap"></div>
+
+      <div class="spin-result">
+        <span class="spin-result-label">결과</span>
+        <span class="spin-result-value" id="spin-result-value"></span>
+      </div>
+
+      <button class="btn-primary" id="btn-spin">뽑기</button>
+    </div>
+  </div>
+
+  <div class="confetti-container" id="confetti-container" aria-hidden="true"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
